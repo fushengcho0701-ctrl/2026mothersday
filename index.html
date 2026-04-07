@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>福盛園藝 - 2026母親節大康預購</title>
+    <title>福盛園藝 - 2026西洋情人節預購</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -12,72 +12,66 @@
         .qty-input::-webkit-inner-spin-button { opacity: 1; }
         .sticky-footer { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); }
         .order-slip { border: 2px solid #f1f5f9; border-radius: 1.5rem; padding: 1.5rem; background: #fff; }
+        .tab-btn { transition: all 0.2s ease; }
+        .tab-active { background-color: #e11d48 !important; color: white !important; border-color: #e11d48 !important; }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen py-6 px-3 pb-32">
     <div class="max-w-4xl mx-auto">
         
         <section id="noticeSection" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8 text-sm text-gray-700">
-            <h1 class="text-2xl font-bold text-rose-600 text-center mb-4"> 2026母親節大康預購 </h1>
+            <h1 class="text-2xl font-bold text-rose-600 text-center mb-4">🌹 2026 西洋情人節預購</h1>
             <div class="grid md:grid-cols-2 gap-6 border-t pt-4">
                 <div class="space-y-4">
                     <p class="font-bold text-gray-900">【訂購須知】</p>
                     <ul class="list-disc ml-4 space-y-1 text-xs text-gray-600">
-                        <li>國外大康運輸有風險，請自行衡量訂購。</li>
-                        <li>大康預計 <b>OO/OO</b> 抵台，若延誤將另行通知。</li>
+                        <li>國外玫瑰運輸有風險，請自行衡量訂購。</li>
+                        <li>玫瑰預計 <b>OO/OO</b> 抵台，若延誤將另行通知。</li>
                         <li>預訂完成後無法取消退款。</li>
                         <li>NG 花材損耗約 1-2 支屬正常範圍。</li>
-                        <li><span class="text-rose-500 font-bold">點擊產品圖片</span> 可切換「📸 店內實拍」與「🚜 農場照」。</li>
+                        <li>使用下方 <span class="text-rose-500 font-bold">切換按鈕</span> 可查看實拍與農場參考照。</li>
                     </ul>
                 </div>
                 <div class="bg-rose-50 p-4 rounded-2xl border border-rose-100">
-                    <p class="font-bold text-gray-900 mb-1">💰 匯款資訊</p>
+                    <p class="font-bold text-gray-900 mb-1 text-sm">💰 匯款資訊</p>
                     <p class="text-xs text-rose-600 mb-2 italic">截圖出貨單後至 LINE 回傳</p>
-                    <p class="text-xs font-bold text-gray-700">銀行：(101) 瑞興銀行</p>
-                    <p class="text-xs font-bold text-gray-700">帳號：0127221335660</p>
+                    <p class="text-[12px] font-bold text-gray-700">銀行：瑞興銀行 (101)</p>
+                    <p class="text-[12px] font-bold text-gray-700">帳號：0127221335660</p>
                 </div>
             </div>
             <div class="mt-4 text-center">
-                <a href="https://lin.ee/TDtujRf" target="_blank" class="text-green-600 font-bold underline">👉 點此聯繫福盛官方 LINE</a>
+                <a href="https://lin.ee/TDtujRf" target="_blank" class="text-green-600 font-bold underline text-sm">👉 點此聯繫福盛官方 LINE</a>
             </div>
         </section>
 
         <form id="orderForm">
             <section class="bg-white rounded-2xl shadow-sm p-6 mb-8 border border-gray-100">
-                <h2 class="text-lg font-bold mb-4 flex items-center"><span class="w-1 h-6 bg-rose-500 mr-2 rounded-full"></span> 訂購人資訊</h2>
+                <h2 class="text-lg font-bold mb-4 flex items-center text-gray-800"><span class="w-1 h-6 bg-rose-500 mr-2 rounded-full"></span> 訂購人資訊</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="md:col-span-3">
                         <label class="flex items-center space-x-2 p-3 bg-rose-50 rounded-xl cursor-pointer border border-rose-100">
                             <input type="checkbox" id="terms" class="w-4 h-4 accent-rose-500" required>
-                            <span class="text-sm font-bold text-rose-600">我已閱讀清楚訂購須知與色差說明</span>
+                            <span class="text-sm font-bold text-rose-600">我已閱讀清楚訂購須知與成色說明</span>
                         </label>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 mb-1">姓名</label>
+                        <label class="block text-[11px] font-bold text-gray-400 mb-1 uppercase">姓名</label>
                         <input type="text" name="customerName" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 mb-1">電話</label>
+                        <label class="block text-[11px] font-bold text-gray-400 mb-1 uppercase">電話</label>
                         <input type="tel" name="customerPhone" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 mb-1">電子郵件</label>
+                        <label class="block text-[11px] font-bold text-gray-400 mb-1 uppercase">電子郵件</label>
                         <input type="email" name="customerEmail" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 mb-1">聯絡平台</label>
-                        <div class="flex space-x-4 mt-1">
-                            <label class="inline-flex items-center"><input type="radio" name="contactType" value="LINE" class="accent-rose-500" checked required><span class="ml-1 text-sm">LINE</span></label>
-                            <label class="inline-flex items-center"><input type="radio" name="contactType" value="Facebook" class="accent-rose-500"><span class="ml-1 text-sm">FB</span></label>
-                            <label class="inline-flex items-center"><input type="radio" name="contactType" value="Instagram" class="accent-rose-500"><span class="ml-1 text-sm">IG</span></label>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-gray-500 mb-1">詳細聯絡資訊 (ID/帳號)</label>
+                        <label class="block text-[11px] font-bold text-gray-400 mb-1 uppercase">詳細聯絡資訊 (ID/帳號)</label>
                         <input type="text" name="contactDetail" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-rose-500 mb-1">預計取貨日 (大康預計OO/OO抵台)</label>
+                        <label class="block text-[11px] font-bold text-rose-500 mb-1 uppercase">預計取貨日</label>
                         <input type="date" name="pickupDate" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required>
                     </div>
                 </div>
@@ -85,19 +79,19 @@
 
             <h2 class="text-xl font-bold mb-6 flex items-center px-2 text-gray-800">📦 訂購內容</h2>
             <div id="productList" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
-                <p class="col-span-full text-center py-20 text-gray-400 animate-pulse">花卉品項加載中...</p>
+                <p class="col-span-full text-center py-20 text-gray-400 animate-pulse">品項加載中...</p>
             </div>
 
             <section class="bg-white rounded-2xl shadow-sm p-6 mb-8 border border-gray-100">
-                <h2 class="text-lg font-bold mb-4 flex items-center"><span class="w-1 h-6 bg-rose-500 mr-2 rounded-full"></span> 配送方式</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                <h2 class="text-lg font-bold mb-4 flex items-center text-gray-800"><span class="w-1 h-6 bg-rose-500 mr-2 rounded-full"></span> 配送方式</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
                     <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-gray-50 border-gray-200">
                         <input type="radio" name="shippingMethod" value="台北花市自取" data-fee="0" class="w-4 h-4 accent-rose-500" required checked>
-                        <span class="ml-2">台北花市 (自取) - 免運</span>
+                        <span class="ml-2 font-medium">台北花市 (自取) - 免運</span>
                     </label>
                     <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-gray-50 border-gray-200">
                         <input type="radio" name="shippingMethod" value="宅配" data-fee="0" class="w-4 h-4 accent-rose-500">
-                        <span class="ml-2">宅配 (待報價)</span>
+                        <span class="ml-2 font-medium">宅配 (待報價)</span>
                     </label>
                     <label class="flex items-center p-3 border rounded-xl cursor-pointer hover:bg-gray-50 border-gray-200">
                         <input type="radio" name="shippingMethod" value="回頭車" id="shipBackhaul" class="w-4 h-4 accent-rose-500">
@@ -105,7 +99,7 @@
                     </label>
                 </div>
                 <div id="backhaulOptions" class="hidden mt-4 pt-4 border-t border-gray-100">
-                    <select id="backhaulLocation" class="w-full border-gray-200 border p-3 rounded-xl bg-gray-50 outline-none">
+                    <select id="backhaulLocation" class="w-full border-gray-200 border p-3 rounded-xl bg-gray-50 outline-none text-xs">
                         <option value="" data-fee="0">請選擇回頭車地點</option>
                     </select>
                 </div>
@@ -115,8 +109,8 @@
                 <div id="summaryContainer" class="mb-3 text-[11px] text-gray-500 space-y-1 max-h-24 overflow-y-auto border-b pb-2 hidden"></div>
                 <div class="flex justify-between items-center">
                     <div>
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total Amount</p>
-                        <p id="finalTotal" class="text-3xl font-black text-rose-600">$0</p>
+                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Total</p>
+                        <p id="finalTotal" class="text-3xl font-black text-rose-600 tracking-tighter">$0</p>
                     </div>
                     <button type="submit" id="submitBtn" class="bg-rose-600 text-white px-10 py-3 rounded-2xl font-bold text-lg hover:bg-rose-700 transition-transform active:scale-95 shadow-lg">確認送出</button>
                 </div>
@@ -127,8 +121,8 @@
             <div class="max-w-2xl mx-auto">
                 <div class="text-center mb-8 pt-10">
                     <div class="text-6xl mb-4">✅</div>
-                    <h2 class="text-2xl font-black text-rose-600 tracking-widest">預購單已送出</h2>
-                    <p class="text-gray-400 text-xs font-bold mt-2">請截圖此出貨單，匯款後至 LINE 回傳告知</p>
+                    <h2 class="text-2xl font-black text-rose-600 tracking-widest uppercase">預購單已送出</h2>
+                    <p class="text-gray-400 text-[11px] font-bold mt-2">請截圖此出貨單，匯款後至 LINE 回傳告知</p>
                 </div>
 
                 <div class="order-slip shadow-2xl border-2 border-gray-50">
@@ -137,38 +131,35 @@
                             <h3 class="text-xl font-bold text-gray-800">福盛園藝 出貨單</h3>
                             <p class="text-[10px] text-gray-400 mt-1" id="orderTimestamp"></p>
                         </div>
-                        <span class="bg-rose-100 text-rose-600 text-[10px] px-2 py-1 rounded-full font-bold uppercase">Valentine 2026</span>
+                        <span class="bg-rose-100 text-rose-600 text-[9px] px-2 py-1 rounded-full font-bold uppercase tracking-wider">Valentine 2026</span>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-y-3 text-sm mb-6 bg-gray-50 p-4 rounded-2xl">
-                        <div><p class="text-gray-400 text-[10px] uppercase font-bold">訂購人</p><p id="resName" class="font-bold"></p></div>
-                        <div><p class="text-gray-400 text-[10px] uppercase font-bold">聯絡電話</p><p id="resPhone" class="font-bold"></p></div>
-                        <div><p class="text-gray-400 text-[10px] uppercase font-bold">聯絡平台</p><p id="resContact" class="font-bold"></p></div>
-                        <div><p class="text-gray-400 text-[10px] uppercase font-bold">取貨日期</p><p id="resDate" class="font-bold"></p></div>
-                        <div class="col-span-2"><p class="text-gray-400 text-[10px] uppercase font-bold">配送方式</p><p id="resShip" class="font-bold text-rose-600"></p></div>
+                    <div class="grid grid-cols-2 gap-y-3 text-xs mb-6 bg-gray-50 p-4 rounded-2xl">
+                        <div><p class="text-gray-400 text-[9px] uppercase font-bold">訂購人</p><p id="resName" class="font-bold text-gray-800"></p></div>
+                        <div><p class="text-gray-400 text-[9px] uppercase font-bold">聯絡電話</p><p id="resPhone" class="font-bold text-gray-800"></p></div>
+                        <div class="col-span-2"><p class="text-gray-400 text-[9px] uppercase font-bold">預計取貨</p><p id="resDate" class="font-bold text-gray-800"></p></div>
+                        <div class="col-span-2"><p class="text-gray-400 text-[9px] uppercase font-bold">配送方式</p><p id="resShip" class="font-bold text-rose-600"></p></div>
                     </div>
 
                     <div class="mb-6 px-1">
-                        <table class="w-full text-sm">
+                        <table class="w-full text-xs">
                             <tbody id="resItemsList"></tbody>
                         </table>
                     </div>
 
                     <div class="border-t pt-5 text-right">
-                        <p class="text-[10px] text-gray-400 font-bold uppercase">總計金額 (已含運費)</p>
-                        <p id="resTotal" class="text-4xl font-black text-rose-600"></p>
+                        <p class="text-[9px] text-gray-400 font-bold uppercase">總計金額 (已含運費)</p>
+                        <p id="resTotal" class="text-4xl font-black text-rose-600 tracking-tighter"></p>
                     </div>
 
-                    <div class="mt-8 pt-6 border-t border-dashed border-gray-200">
-                        <div class="bg-gray-900 text-white p-4 rounded-2xl">
-                            <p class="text-xs font-bold mb-1 opacity-60">匯款帳戶資訊</p>
-                            <p class="text-sm font-bold">瑞興銀行 (101) 0127221335660</p>
-                        </div>
+                    <div class="mt-8 pt-6 border-t border-dashed border-gray-200 text-center">
+                        <p class="text-[11px] font-bold text-gray-800 mb-2 underline underline-offset-4 decoration-rose-300">💰 匯款帳戶資訊</p>
+                        <p class="text-[12px] font-black text-gray-700">瑞興銀行 (101) 0127221335660</p>
                     </div>
                 </div>
 
                 <div class="mt-10 flex flex-col space-y-4 pb-10">
-                    <a href="https://lin.ee/TDtujRf" target="_blank" class="bg-green-500 text-white py-5 rounded-2xl font-bold shadow-xl flex items-center justify-center space-x-2 text-xl"><span>點此開啟 LINE 回傳截圖</span></a>
+                    <a href="https://lin.ee/TDtujRf" target="_blank" class="bg-green-500 text-white py-5 rounded-2xl font-bold shadow-xl flex items-center justify-center space-x-2 text-xl"><span>開啟 LINE 回傳截圖</span></a>
                     <button onclick="location.reload()" class="text-gray-400 underline text-xs">返回修改資料</button>
                 </div>
             </div>
@@ -200,16 +191,21 @@
             data.forEach((p, i) => {
                 const card = `
                     <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 flex flex-col items-center">
-                        <div class="relative w-full mb-3 cursor-pointer" onclick="toggleImage(${i})">
+                        <div class="relative w-full mb-2">
                             <img id="img-display-${i}" src="${p.imgReal}" class="product-img w-full rounded-xl">
-                            <div id="img-label-${i}" class="absolute top-2 left-2 bg-black/60 text-white text-[9px] px-2 py-1 rounded-md backdrop-blur-sm">📸 實拍一把</div>
                         </div>
-                        <h3 class="text-rose-600 font-black text-lg leading-tight">${p.series}</h3>
+                        
+                        <div class="flex w-full space-x-1 mb-3">
+                            <button type="button" onclick="switchImg(${i}, 'real')" id="btn-real-${i}" class="tab-btn tab-active flex-1 text-[9px] py-1 border rounded-md font-bold">實拍一把</button>
+                            <button type="button" onclick="switchImg(${i}, 'farm')" id="btn-farm-${i}" class="tab-btn bg-gray-50 flex-1 text-[9px] py-1 border border-gray-200 text-gray-400 rounded-md font-bold">農場照</button>
+                        </div>
+
+                        <h3 class="text-rose-600 font-black text-lg leading-tight tracking-tighter uppercase">${p.series}</h3>
                         <p class="text-[11px] font-bold text-gray-700 h-8 overflow-hidden text-center mt-1 leading-tight">${p.name}</p>
                         <p class="text-green-600 font-bold text-sm mt-1">NT$${p.price}</p>
                         <div class="w-full flex items-center justify-between pt-3 border-t border-gray-50 mt-3">
-                            <span class="text-[10px] text-gray-400 font-bold uppercase">Qty</span>
-                            <input type="number" data-index="${i}" value="0" min="0" class="qty-input w-14 border rounded-lg py-1 text-center font-bold text-gray-800 outline-none">
+                            <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Qty</span>
+                            <input type="number" data-index="${i}" value="0" min="0" class="qty-input w-14 border rounded-lg py-1 text-center font-bold text-gray-800 focus:border-rose-400 outline-none">
                         </div>
                     </div>
                 `;
@@ -218,19 +214,31 @@
             setupListeners();
         });
 
-        function toggleImage(index) {
+        // 修改後的按鈕切換邏輯
+        function switchImg(index, type) {
             const img = document.getElementById(`img-display-${index}`);
-            const label = document.getElementById(`img-label-${index}`);
+            const btnReal = document.getElementById(`btn-real-${index}`);
+            const btnFarm = document.getElementById(`btn-farm-${index}`);
             const p = productData[index];
-            img.style.opacity = 0;
+
+            img.style.opacity = 0.3;
+            
             setTimeout(() => {
-                if (img.src === p.imgReal) {
-                    img.src = p.imgFarm; label.textContent = "🚜 農場照"; label.classList.replace('bg-black/60', 'bg-rose-500/80');
+                if (type === 'real') {
+                    img.src = p.imgReal;
+                    btnReal.classList.add('tab-active');
+                    btnReal.classList.remove('bg-gray-50', 'text-gray-400');
+                    btnFarm.classList.remove('tab-active');
+                    btnFarm.classList.add('bg-gray-50', 'text-gray-400');
                 } else {
-                    img.src = p.imgReal; label.textContent = "📸 實拍"; label.classList.replace('bg-rose-500/80', 'bg-black/60');
+                    img.src = p.imgFarm;
+                    btnFarm.classList.add('tab-active');
+                    btnFarm.classList.remove('bg-gray-50', 'text-gray-400');
+                    btnReal.classList.remove('tab-active');
+                    btnReal.classList.add('bg-gray-50', 'text-gray-400');
                 }
                 img.style.opacity = 1;
-            }, 200);
+            }, 150);
         }
 
         function setupListeners() {
@@ -275,20 +283,19 @@
             const btn = document.getElementById('submitBtn'); btn.disabled = true; btn.textContent = '傳送中...';
             const shipMethod = document.querySelector('input[name="shippingMethod"]:checked').value;
             const payload = {
-                customer: { name: this.customerName.value, phone: this.customerPhone.value, email: this.customerEmail.value, contactType: document.querySelector('input[name="contactType"]:checked').value, contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
+                customer: { name: this.customerName.value, phone: this.customerPhone.value, email: this.customerEmail.value, contactType: 'LINE', contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
                 items: items, shipping: { method: shipMethod, location: shipMethod === '回頭車' ? backhaulSelect.value : 'N/A', fee: shipMethod === '回頭車' ? parseInt(backhaulSelect.selectedOptions[0].dataset.fee) : 0 },
                 totalWithShipping: parseInt(document.getElementById('finalTotal').textContent.replace('$', ''))
             };
             fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) }).then(() => {
                 document.getElementById('resName').textContent = payload.customer.name;
                 document.getElementById('resPhone').textContent = payload.customer.phone;
-                document.getElementById('resContact').textContent = `(${payload.customer.contactType}) ${payload.customer.contactDetail}`;
                 document.getElementById('resDate').textContent = payload.customer.pickupDate;
                 document.getElementById('resShip').textContent = payload.shipping.method === '回頭車' ? `回頭車 - ${payload.shipping.location}` : payload.shipping.method;
-                document.getElementById('orderTimestamp').textContent = '訂單時間: ' + new Date().toLocaleString();
+                document.getElementById('orderTimestamp').textContent = '傳送時間: ' + new Date().toLocaleString();
                 document.getElementById('resTotal').textContent = document.getElementById('finalTotal').textContent;
                 let itemsHtml = '';
-                payload.items.forEach(item => { itemsHtml += `<tr class="border-b border-gray-50"><td class="py-3 font-bold text-gray-700">${item.name}</td><td class="py-3 text-center">x ${item.quantity}</td><td class="py-3 text-right font-black text-rose-600">$${item.price * item.quantity}</td></tr>`; });
+                payload.items.forEach(item => { itemsHtml += `<tr class="border-b border-gray-50"><td class="py-3 font-bold text-gray-700">${item.name}</td><td class="py-3 text-center text-gray-400">x ${item.quantity}</td><td class="py-3 text-right font-black text-rose-600 tracking-tighter">$${item.price * item.quantity}</td></tr>`; });
                 if (payload.shipping.fee > 0) itemsHtml += `<tr class="text-rose-500 font-bold"><td class="py-3 italic">運費 (${payload.shipping.location})</td><td></td><td class="py-3 text-right">+$${payload.shipping.fee}</td></tr>`;
                 document.getElementById('resItemsList').innerHTML = itemsHtml;
                 document.getElementById('successPage').classList.remove('hidden'); window.scrollTo(0,0);
