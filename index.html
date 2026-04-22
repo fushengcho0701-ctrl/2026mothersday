@@ -245,14 +245,18 @@
             const payload = {
                 customer: { name: this.customerName.value, phone: this.customerPhone.value, contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
                 items: items, 
-                shipping: { method: document.querySelector('input[name="shippingMethod"]:checked').value, location: document.getElementById('backhaulLocation').value || 'N/A', fee: (document.querySelector('input[name="shippingMethod"]:checked').value === '回頭車') ? parseInt(document.getElementById('backhaulLocation').selectedOptions[0].dataset.fee) : 0 },
+                shipping: { 
+    method: shipMethod, 
+    location: (shipMethod === '回頭車') ? document.getElementById('backhaulLocation').value : '無', 
+    fee: (shipMethod === '回頭車') ? parseInt(document.getElementById('backhaulLocation').selectedOptions[0].dataset.fee) : 0 
+},
                 totalWithShipping: parseInt(document.getElementById('finalTotal').textContent.replace('$', ''))
             };
             fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) }).then(() => {
                 document.getElementById('resName').textContent = payload.customer.name;
                 document.getElementById('resPhone').textContent = payload.customer.phone;
                 document.getElementById('resDate').textContent = payload.customer.pickupDate;
-                document.getElementById('resShip').textContent = payload.shipping.method + (payload.shipping.method === '回頭車' ? ` - ${payload.shipping.location}` : '');
+                document.getElementById('resShip').textContent = payload.shipping.method + (payload.shipping.method === '回頭車' ? ' - ' + payload.shipping.location : '');
                 document.getElementById('orderTimestamp').textContent = '傳送時間: ' + new Date().toLocaleString();
                 document.getElementById('resTotal').textContent = document.getElementById('finalTotal').textContent;
                 let itemsHtml = '';
