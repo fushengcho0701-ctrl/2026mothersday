@@ -22,7 +22,7 @@
         <div id="closedMessage" class="hidden text-center py-20 bg-white rounded-3xl shadow-xl border border-gray-200">
             <div class="text-6xl mb-4">⌛</div>
             <h2 class="text-3xl font-black text-gray-800">預購已截止</h2>
-            <p class="text-gray-500 mt-2 px-6 text-sm">2026 母親節康乃馨預購已於 4/22 23:59 結束。<br>感謝您的支持，若有現貨需求或訂單問題，請私訊官方 LINE。</p>
+            <p class="text-gray-500 mt-2 px-6 text-sm">2026 母親節康乃馨預購活動已結束。<br>感謝您的支持，若有現貨需求或訂單問題，請私訊官方 LINE。</p>
             <a href="https://lin.ee/TDtujRf" class="inline-block mt-8 bg-green-500 text-white px-8 py-3 rounded-full font-bold">聯繫官方 LINE</a>
         </div>
 
@@ -46,14 +46,15 @@
                             <li>務必詳讀預購須知，若有運費不知或其他問題可以私訊官方Line，謝謝。</li>
                         </ul>
                     </div>
-                    <div class="bg-rose-50 p-4 rounded-2xl border border-rose-100">
+                    <div class="bg-rose-50 p-4 rounded-2xl border border-rose-100 flex flex-col justify-center">
                         <p class="font-bold text-gray-900 mb-1 text-sm">💰 匯款資訊</p>
                         <p class="text-xs text-rose-600 mb-2 italic">截圖出貨單後至 LINE 回傳匯款明細</p>
-                        <p class="text-[12px] font-bold text-gray-700">銀行：瑞興銀行 (101) | 帳號：0127221335660</p>
+                        <p class="text-[12px] font-bold text-gray-700">銀行：瑞興銀行 (101)</p>
+                        <p class="text-[12px] font-bold text-gray-700">帳號：0127221335660</p>
+                        <div class="mt-4 pt-4 border-t border-rose-200 text-center">
+                            <a href="https://lin.ee/TDtujRf" target="_blank" class="text-green-600 font-bold underline text-sm">👉 點此聯繫福盛官方 LINE</a>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-4 text-center border-t pt-4">
-                    <a href="https://lin.ee/TDtujRf" target="_blank" class="text-green-600 font-bold underline text-sm">👉 點此聯繫福盛官方 LINE</a>
                 </div>
             </section>
 
@@ -69,8 +70,9 @@
                         </div>
                         <div><label class="block text-[11px] font-bold text-gray-400 mb-1">姓名</label><input type="text" name="customerName" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required></div>
                         <div><label class="block text-[11px] font-bold text-gray-400 mb-1">電話</label><input type="tel" name="customerPhone" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required></div>
+                        <div><label class="block text-[11px] font-bold text-gray-400 mb-1">電子郵件</label><input type="email" name="customerEmail" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required></div>
                         <div><label class="block text-[11px] font-bold text-gray-400 mb-1">詳細聯絡資訊 (ID/帳號)</label><input type="text" name="contactDetail" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required></div>
-                        <div><label class="block text-[11px] font-bold text-rose-500 mb-1">預計取貨日 (4/28起抵台)</label><input type="date" name="pickupDate" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required></div>
+                        <div class="md:col-span-2"><label class="block text-[11px] font-bold text-rose-500 mb-1">預計取貨日 (4/28起抵台)</label><input type="date" name="pickupDate" class="w-full border-gray-200 border p-2 rounded-lg outline-none focus:border-rose-400" required></div>
                     </div>
                 </section>
 
@@ -104,7 +106,7 @@
                     <div id="summaryContainer" class="mb-3 text-[11px] text-gray-500 space-y-1 max-h-24 overflow-y-auto border-b pb-2 hidden"></div>
                     <div class="flex justify-between items-center">
                         <div><p class="text-[10px] text-gray-400 font-bold uppercase">Total</p><p id="finalTotal" class="text-3xl font-black text-rose-600 tracking-tighter">$0</p></div>
-                        <button type="submit" id="submitBtn" class="bg-rose-600 text-white px-10 py-3 rounded-2xl font-bold text-lg hover:bg-rose-700 shadow-lg active:scale-95">確認送出</button>
+                        <button type="submit" id="submitBtn" class="bg-rose-600 text-white px-10 py-3 rounded-2xl font-bold text-lg hover:bg-rose-700 shadow-lg active:scale-95 transition-transform">確認送出</button>
                     </div>
                 </section>
             </form>
@@ -130,9 +132,10 @@
                     </div>
                     <div class="mb-6"><table class="w-full text-xs"><tbody id="resItemsList"></tbody></table></div>
                     <div class="border-t pt-5 text-right"><p class="text-[9px] text-gray-400 font-bold uppercase">應匯總金額</p><p id="resTotal" class="text-4xl font-black text-rose-600 tracking-tighter"></p></div>
+                    <div class="mt-8 pt-6 border-t border-dashed border-gray-200 text-center"><p class="text-[11px] font-bold text-gray-800 mb-2">💰 匯款帳戶資訊</p><p class="text-[12px] font-black text-gray-700">瑞興銀行 (101) 0127221335660</p></div>
                 </div>
                 <div class="mt-10 flex flex-col space-y-4 pb-10">
-                    <a href="https://lin.ee/TDtujRf" target="_blank" class="bg-green-500 text-white py-5 rounded-2xl font-bold shadow-xl flex items-center justify-center space-x-2 text-xl"><span>點此開啟 LINE 回傳截圖</span></a>
+                    <a href="https://lin.ee/TDtujRf" target="_blank" class="bg-green-500 text-white py-5 rounded-2xl font-bold shadow-xl flex items-center justify-center space-x-2 text-xl"><span>開啟 LINE 回傳截圖</span></a>
                     <button onclick="location.reload()" class="text-gray-400 underline text-xs">返回修改資料</button>
                 </div>
             </div>
@@ -243,29 +246,27 @@
             if (items.length === 0) return alert('請先填寫訂購數量！');
             const btn = document.getElementById('submitBtn'); btn.disabled = true; btn.textContent = '傳送中...';
             
-            // --- 務必補上下面這一行 ---
             const shipMethod = document.querySelector('input[name="shippingMethod"]:checked').value;
-            
+            const finalLoc = (shipMethod === '回頭車') ? document.getElementById('backhaulLocation').value : '無';
+            const finalFee = (shipMethod === '回頭車') ? parseInt(document.getElementById('backhaulLocation').selectedOptions[0].dataset.fee) : 0;
+
             const payload = {
-                customer: { name: this.customerName.value, phone: this.customerPhone.value, contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
+                customer: { 
+                    name: this.customerName.value, 
+                    phone: this.customerPhone.value, 
+                    email: this.customerEmail.value, 
+                    contactDetail: this.contactDetail.value, 
+                    pickupDate: this.pickupDate.value 
+                },
                 items: items, 
                 shipping: { 
                     method: shipMethod, 
-                    location: (shipMethod === '回頭車') ? document.getElementById('backhaulLocation').value : '無', 
-                    fee: (shipMethod === '回頭車') ? parseInt(document.getElementById('backhaulLocation').selectedOptions[0].dataset.fee) : 0 
+                    location: finalLoc, 
+                    fee: finalFee 
                 },
                 totalWithShipping: parseInt(document.getElementById('finalTotal').textContent.replace('$', ''))
             };
-            const payload = {
-                customer: { name: this.customerName.value, phone: this.customerPhone.value, contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
-                items: items, 
-                shipping: { 
-    method: shipMethod, 
-    location: (shipMethod === '回頭車') ? document.getElementById('backhaulLocation').value : '無', 
-    fee: (shipMethod === '回頭車') ? parseInt(document.getElementById('backhaulLocation').selectedOptions[0].dataset.fee) : 0 
-},
-                totalWithShipping: parseInt(document.getElementById('finalTotal').textContent.replace('$', ''))
-            };
+
             fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(payload) }).then(() => {
                 document.getElementById('resName').textContent = payload.customer.name;
                 document.getElementById('resPhone').textContent = payload.customer.phone;
