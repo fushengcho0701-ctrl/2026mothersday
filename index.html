@@ -242,6 +242,20 @@
             });
             if (items.length === 0) return alert('請先填寫訂購數量！');
             const btn = document.getElementById('submitBtn'); btn.disabled = true; btn.textContent = '傳送中...';
+            
+            // --- 務必補上下面這一行 ---
+            const shipMethod = document.querySelector('input[name="shippingMethod"]:checked').value;
+            
+            const payload = {
+                customer: { name: this.customerName.value, phone: this.customerPhone.value, contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
+                items: items, 
+                shipping: { 
+                    method: shipMethod, 
+                    location: (shipMethod === '回頭車') ? document.getElementById('backhaulLocation').value : '無', 
+                    fee: (shipMethod === '回頭車') ? parseInt(document.getElementById('backhaulLocation').selectedOptions[0].dataset.fee) : 0 
+                },
+                totalWithShipping: parseInt(document.getElementById('finalTotal').textContent.replace('$', ''))
+            };
             const payload = {
                 customer: { name: this.customerName.value, phone: this.customerPhone.value, contactDetail: this.contactDetail.value, pickupDate: this.pickupDate.value },
                 items: items, 
